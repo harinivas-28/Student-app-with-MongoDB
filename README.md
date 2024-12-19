@@ -1,3 +1,153 @@
+# **Student App**
+
+The **Student App** is a web application built with React for managing and tracking students' marks using their roll numbers. It integrates with a MongoDB cluster for data storage and utilizes **ngrok** for secure tunneling.
+
+## **Features**
+
+- **Add Student**: Add a new student with their name, roll number, and scores for various subjects (Java, CPP, Python, GenAI, FSD).
+- **View Students**: View a list of all students along with their marks.
+- **Edit Student**: Update a student's marks directly from the table.
+- **Delete Student**: Remove a student from the database by roll number.
+
+---
+
+## **Technologies Used**
+
+- **Frontend**: React, JSX, CSS
+- **Backend**: Node.js, Express.js
+- **Database**: MongoDB (Atlas)
+- **Tunneling**: ngrok
+
+---
+
+## **Setup Instructions**
+
+### **Frontend Setup**
+
+1. Clone the repository:
+   ```bash
+   git clone <repository_url>
+   cd student-app
+
+**Backend Setup**
+
+1. Navigate to the backend folder:
+  ```bash
+  cd backend
+  ```
+
+2. Install dependencies:
+  ```bash
+  npm install
+  ```
+
+3. Set up environment variables (Create a `.env` file in the backend directory with the following):
+  ```
+  REACT_APP_API_BASE = "http://localhost:3001"  
+  DATABASE_URL = "your-database-url"
+  ```
+
+4. Start the backend server:
+  ```bash
+  npm start
+  ```
+
+**ngrok Setup**
+
+1. Install ngrok (if not already installed):
+  ```bash
+  npm install -g ngrok
+  ```
+
+2. Start ngrok for backend tunneling:
+  ```bash
+  ngrok http 3001
+  ```
+
+3. Copy the public URL provided by ngrok and update your frontend API calls to use this URL.
+
+
+**Project Structure**
+
+```
+project/
+├── frontend/
+│   ├── public/
+│   ├── src/
+│   │   ├── components/
+│   │   ├── styles/
+│   │   └── App.js
+│   └── ...
+├── backend/
+│   ├── models/
+│   ├── routes/
+│   ├── server.js
+│   └── ...
+└── package.json
+```
+
+**(Note:** The `package.json` file would contain the necessary dependencies for both the frontend and backend.)
+
+**(Note 2):**  The `Project Structure` is a visual representation, not executable code. The entries under each folder would contain actual files and their contents. The structure describes the typical layout of a project with a frontend (React) and a backend (Node.js/Express). The specific file names and folder contents are not shown, as only a directory structure and descriptions are present in the original image.
+
+# API Endpoints
+
+## Students
+
+| Method | Endpoint | Description |
+|---|---|---|
+| GET | `/api/students` | Fetch all students |
+| POST | `/api/students` | Add a new student |
+| PUT | `/api/students/{id}` | Update student details |
+| DELETE | `/api/students/{id}` | Delete a student |
+
+
+# How It Works
+
+1. Adding a Student:
+    * Navigate to the Add Student page.
+    * Fill in the form with the student's details and submit.
+
+2. Viewing Students:
+    * Go to the View Students page to see the list of all students.
+
+3. Editing Students:
+    * Click the Edit button in the table to modify marks and submit the changes.
+
+4. Deleting a Student:
+    * Use the Delete button to remove a student from the database.
+
+
+# Contributing
+
+1. Fork the repository.
+2. Create a new branch:
+   ```bash
+   git checkout -b "your-feature/your-feature-name"
+   
+3. Commit your changes:
+   ```bash
+   git commit -m "Add your message here"
+   ```
+4. Push to the branch:
+   ```bash
+   git push origin your-feature/your-feature-name
+   ```
+5. Open a Pull request.
+
+
+# License
+
+This project is licensed under the MIT License. See the LICENSE file for details.
+
+
+# Acknowledgments
+
+* MongoDB for database service.
+* ngrok for frontend tunneling.
+* React for frontend development.
+* Node.js and Express.js for backend API.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
