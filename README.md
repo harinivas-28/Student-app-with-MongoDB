@@ -26,7 +26,7 @@ The **Student App** is a web application built with React for managing and track
 
 1. Clone the repository:
    ```bash
-   git clone <repository_url>
+   git clone https://github.com/harinivas-28/Student-app-with-MongoDB.git
    cd student-app
 
 **Backend Setup**
