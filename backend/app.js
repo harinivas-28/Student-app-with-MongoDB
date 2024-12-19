@@ -16,6 +16,7 @@ const corsOptions = {
 app.use(cors(corsOptions));
 
 // Connect to MongoDB Atlas
+// mongoose.connect("mongodb+srv://<user_name>:<password>@cluster0.cikhuki.mongodb.net/studentsDB?retryWrites=true&w=majority&appName=Cluster0", { 
 mongoose
   .connect("mongodb://localhost:27017/studentDB", {
     useNewUrlParser: true,
